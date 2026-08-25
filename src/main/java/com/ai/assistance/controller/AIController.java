@@ -18,11 +18,6 @@ public class AIController {
 		this.openAIService = openAIService;
 	}
 
-	@GetMapping("/ai/ask")
-	public String askAI(@RequestParam String question) {
-		return openAIService.askAI(question);
-	}
-
 	@PostMapping("/ai/order-summary")
 	public String generateOrderSummary(@RequestBody OrderRequest orderRequest) {
 		return openAIService.generateOrderSummary(orderRequest);
