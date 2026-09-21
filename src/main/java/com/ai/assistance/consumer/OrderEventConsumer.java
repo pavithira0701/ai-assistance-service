@@ -25,7 +25,7 @@ public class OrderEventConsumer {
 	public void consumeOrderEvent(OrderCreatedEvent event) {
 
 		System.out.println("=================================");
-		System.out.println("ORDER EVENT RECEIVED");
+		System.out.println("ORDER EVENT RECEIVED NOW");
 		System.out.println("Order ID    : " + event.getOrderId());
 		System.out.println("Product ID  : " + event.getProductId());
 		System.out.println("Quantity    : " + event.getQuantity());

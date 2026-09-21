@@ -1,0 +1,951 @@
+2026-09-21T13:54:43.746+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.a.a.AiAssistanceServiceApplication     : Starting AiAssistanceServiceApplication using Java 21.0.12 with PID 16192 (C:\Users\PAVITHIRA\git\ai-assistance-service\target\classes started by PAVITHIRA in C:\Users\PAVITHIRA\git\ai-assistance-service)
+2026-09-21T13:54:43.766+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.a.a.AiAssistanceServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-21T13:54:43.830+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-21T13:54:43.830+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-21T13:54:45.025+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3332175d-ea4b-3176-b06d-1ca0fb96cf15
+2026-09-21T13:54:45.517+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8084 (http)
+2026-09-21T13:54:45.549+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-21T13:54:45.549+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-21T13:54:45.637+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1806 ms
+2026-09-21T13:54:46.581+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'ORDER-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2026-09-21T13:54:46.646+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'PRODUCT-SERVICE' URL not provided. Will try picking an instance via load-balancing.
+2026-09-21T13:54:47.435+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-09-21T13:54:47.497+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-21T13:54:47.557+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-21T13:54:47.616+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-21T13:54:47.621+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-21T13:54:47.635+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-21T13:54:47.635+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-21T13:54:47.636+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-21T13:54:47.636+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-21T13:54:47.637+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-21T13:54:47.637+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-21T13:54:47.637+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-21T13:54:47.914+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplicationsInternal(RestClientEurekaHttpClient.java:201) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplications(RestClientEurekaHttpClient.java:137) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1061) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:976) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:419) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:254) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:249) ~[eureka-client-2.0.6.jar:2.0.6]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:372) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:373) ~[spring-cloud-context-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:177) ~[spring-cloud-context-5.0.2.jar:5.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:369) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:480) ~[spring-cloud-context-5.0.2.jar:5.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:na]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613) ~[spring-context-7.0.9.jar:7.0.9]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1013) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.ai.assistance.AiAssistanceServiceApplication.main(AiAssistanceServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:219) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:547) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:138) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614) ~[spring-web-7.0.9.jar:7.0.9]
+	... 71 common frames omitted
+
+2026-09-21T13:54:47.922+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2026-09-21T13:54:47.922+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1061) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:976) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:419) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:254) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:249) ~[eureka-client-2.0.6.jar:2.0.6]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:372) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:373) ~[spring-cloud-context-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:177) ~[spring-cloud-context-5.0.2.jar:5.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:369) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:480) ~[spring-cloud-context-5.0.2.jar:5.0.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:na]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:420) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:409) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:613) ~[spring-context-7.0.9.jar:7.0.9]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:379) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:306) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1013) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.ai.assistance.AiAssistanceServiceApplication.main(AiAssistanceServiceApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+
+2026-09-21T13:54:47.926+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2026-09-21T13:54:47.926+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2026-09-21T13:54:47.926+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2026-09-21T13:54:47.926+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-21T13:54:47.932+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-21T13:54:47.939+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1789979087935 with initial instances count: 0
+2026-09-21T13:54:47.943+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AI-ASSISTANCE-SERVICE with eureka with status UP
+2026-09-21T13:54:47.943+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1789979087943, current=UP, previous=STARTING]
+2026-09-21T13:54:47.947+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084: registering service...
+2026-09-21T13:54:48.300+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8084 (http) with context path '/'
+2026-09-21T13:54:48.301+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2026-09-21T13:54:48.356+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ai-assistance-group-1
+	client.rack = 
+	config.providers = []
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ai-assistance-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = []
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	share.acquire.mode = BATCH_OPTIMIZED
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = []
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-09-21T13:54:48.364+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:219) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:547) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:138) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614) ~[spring-web-7.0.9.jar:7.0.9]
+	... 24 common frames omitted
+
+2026-09-21T13:54:48.370+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2026-09-21T13:54:48.370+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-21T13:54:48.372+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-21T13:54:48.415+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-09-21T13:54:48.562+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.2.1
+2026-09-21T13:54:48.562+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 92f61c44867f39dc
+2026-09-21T13:54:48.562+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1789979088562
+2026-09-21T13:54:48.562+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Subscribed to topic(s): order-created
+2026-09-21T13:54:48.585+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [restartedMain] c.a.a.AiAssistanceServiceApplication     : Started AiAssistanceServiceApplication in 5.309 seconds (process running for 13.121)
+2026-09-21T13:54:48.972+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:48.973+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:48.973+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:49.082+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:49.082+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:49.082+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:49.082+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:49.144+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:49.316+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:49.316+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:49.316+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:49.508+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:49.512+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:49.512+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:49.881+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:49.881+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:49.881+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:50.674+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:50.726+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:50.726+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:50.726+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:51.081+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:51.081+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:51.860+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:51.862+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:51.863+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:52.704+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:52.704+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:52.704+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:52.705+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:53.582+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:53.590+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:53.595+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:53.707+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:53.709+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:53.710+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:54.583+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:54.584+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:54.586+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:54.645+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:54.922+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:54.980+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:55.318+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:55.379+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:56.317+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:56.317+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:56.317+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:57.158+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:57.159+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:57.159+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:57.242+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:58.305+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:58.306+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:58.306+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:54:59.201+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:54:59.440+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:54:59.441+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:54:59.442+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:00.298+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:00.299+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:00.299+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:00.443+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:00.497+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:00.948+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:01.012+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:01.912+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:01.914+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:01.915+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:02.759+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:02.759+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:02.759+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:02.825+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:03.606+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:03.610+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:03.614+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:03.702+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:03.757+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:03.929+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:03.930+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:03.931+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:04.769+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:04.821+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:04.822+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:04.822+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:05.261+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:05.261+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:06.145+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:06.145+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:06.145+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:07.030+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:07.031+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:07.031+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:07.929+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:07.929+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:07.929+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:08.045+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:08.097+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:08.616+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:08.616+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:08.617+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:08.731+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:08.807+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:08.808+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:08.808+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:09.658+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:10.082+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:10.082+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:10.082+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:10.970+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:11.866+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:11.867+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:11.867+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:12.817+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:12.817+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:12.817+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:12.866+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:12.929+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:13.618+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:13.620+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:13.622+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:13.727+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:13.779+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:13.993+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:13.994+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:13.994+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:14.840+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:15.310+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:15.310+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:15.311+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:16.225+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:16.225+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:16.225+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:16.225+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:16.283+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:17.063+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:17.120+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:17.120+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:17.120+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:17.929+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-21T13:55:17.930+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-21T13:55:17.930+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-21T13:55:17.931+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-21T13:55:17.931+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-21T13:55:17.931+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-21T13:55:17.931+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-21T13:55:17.938+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplicationsInternal(RestClientEurekaHttpClient.java:201) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.getApplications(RestClientEurekaHttpClient.java:137) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1061) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:976) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1489) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1457) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:219) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:547) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:138) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614) ~[spring-web-7.0.9.jar:7.0.9]
+	... 26 common frames omitted
+
+2026-09-21T13:55:17.941+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2026-09-21T13:55:17.941+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1061) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:976) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1489) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1457) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-21T13:55:17.949+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+
+org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.sendHeartBeat(RestClientEurekaHttpClient.java:91) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:860) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1418) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:219) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:547) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:138) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614) ~[spring-web-7.0.9.jar:7.0.9]
+	... 23 common frames omitted
+
+2026-09-21T13:55:17.953+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2026-09-21T13:55:17.953+05:30 ERROR 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:860) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1418) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-21T13:55:18.076+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:18.076+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:18.076+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:18.384+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084: registering service...
+2026-09-21T13:55:18.403+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:779) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:624) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:888) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.register(RestClientEurekaHttpClient.java:64) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:219) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:547) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:138) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:112) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:186) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183) ~[httpclient5-5.6.4.jar:5.6.4]
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:87) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeWithRequestAndBody(AbstractBufferingClientHttpRequest.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest$EndOfChainRequestExecution.execute(InterceptingClientHttpRequest.java:102) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98) ~[spring-cloud-netflix-eureka-client-5.0.2.jar:5.0.2]
+	at org.springframework.http.client.ClientHttpRequestInterceptor.lambda$apply$0(ClientHttpRequestInterceptor.java:89) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:73) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:50) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:80) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:614) ~[spring-web-7.0.9.jar:7.0.9]
+	... 23 common frames omitted
+
+2026-09-21T13:55:18.406+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/AI-ASSISTANCE-SERVICE": Connect to http://localhost:8761 failed: Connection refused: getsockopt
+2026-09-21T13:55:18.406+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AI-ASSISTANCE-SERVICE/Amulu:AI-ASSISTANCE-SERVICE:8084 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-21T13:55:18.407+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:843) ~[eureka-client-2.0.6.jar:2.0.6]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.6.jar:2.0.6]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-09-21T13:55:18.899+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:18.899+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:18.899+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:19.031+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:19.096+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:19.259+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:19.313+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:19.727+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:19.778+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:20.668+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:20.669+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:20.669+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:21.535+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:21.591+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:21.592+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:21.592+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:22.597+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:22.597+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:22.600+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:23.513+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:23.513+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:23.513+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:23.513+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.568+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.634+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.634+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.635+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.739+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.801+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:23.975+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:24.032+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:24.452+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:24.452+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:24.452+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:25.355+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:25.355+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:25.355+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:26.362+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:26.363+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:26.363+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:27.378+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:27.378+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:27.379+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:28.303+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:28.640+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:28.641+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:28.642+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:29.502+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:29.570+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:29.736+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:29.736+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:29.736+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:30.552+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:31.093+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:31.095+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:31.095+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:32.105+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:32.105+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:32.105+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:33.065+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:33.127+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:33.129+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:33.129+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:34.129+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:34.129+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:34.129+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:35.036+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:35.290+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:35.291+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:35.293+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:36.302+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:36.303+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:36.303+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:37.202+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:37.263+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:37.708+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:37.709+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:37.709+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:38.662+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:38.747+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:38.747+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:38.747+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:39.589+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:39.820+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:39.821+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:39.821+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected
+2026-09-21T13:55:40.816+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Rebootstrapping with [localhost/127.0.0.1:9092]
+2026-09-21T13:55:40.872+05:30  INFO 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Node -1 disconnected.
+2026-09-21T13:55:40.872+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-09-21T13:55:40.872+05:30  WARN 16192 --- [AI-ASSISTANCE-SERVICE] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ai-assistance-group-1, groupId=ai-assistance-group] Bootstrap broker localhost:9092 (id: -1 rack: null isFenced: false) disconnected

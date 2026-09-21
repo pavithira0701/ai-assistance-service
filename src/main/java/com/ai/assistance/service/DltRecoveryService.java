@@ -15,6 +15,9 @@ public class DltRecoveryService {
 	}
 
 	public void recover(OrderCreatedEvent event) {
+		if (event == null || event.getOrderId() == null) {
+			throw new IllegalArgumentException("A DLT event with an order ID is required");
+		}
 		kafkaTemplate.send("order-created", event.getOrderId().toString(), event);
 		System.out.println("===== DLT EVENT REPUBLISHED TO order-created =====");
 		System.out.println(event);
