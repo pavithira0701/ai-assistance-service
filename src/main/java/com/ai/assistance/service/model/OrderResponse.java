@@ -20,6 +20,7 @@ public class OrderResponse {
 		return productId;
 	}
 
+	
 	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
