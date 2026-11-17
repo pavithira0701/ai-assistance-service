@@ -35,7 +35,7 @@ public class OrderTools {
 					Order ID: %d
 					Product ID: %d
 					Quantity: %d
-					""".formatted(order.getOrderId(), order.getProductId(), order.getQuantity());
+					""".formatted(order.orderId(), order.productId(), order.quantity());
 
 		} catch (FeignException.NotFound e) {
 
