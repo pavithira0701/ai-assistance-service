@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AiAssistanceServiceApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Starting AiAssistanceService...");
 		SpringApplication.run(AiAssistanceServiceApplication.class, args);
 	}
 
