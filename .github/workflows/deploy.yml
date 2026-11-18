@@ -74,10 +74,10 @@ jobs:
             --comment "Deploy Spring Boot AI Assistant" \
             --parameters 'commands=[
               "set -e",
-              "docker pull ghcr.io/pavithira0701/ai-assistance-service:${{ github.event.workflow_run.head_sha }}",
+              "docker pull ghcr.io/pavithira0701/ai-assistance-service:sha-${{ github.event.workflow_run.head_sha }}",
               "docker stop ai-assistance-service || true",
               "docker rm ai-assistance-service || true",
-              "docker run -d --name ai-assistance-service --restart unless-stopped -p 8084:8084 ghcr.io/pavithira0701/ai-assistance-service:${{ github.event.workflow_run.head_sha }}",
+              "docker run -d --name ai-assistance-service --restart unless-stopped -p 8084:8084 ghcr.io/pavithira0701/ai-assistance-service:sha-${{ github.event.workflow_run.head_sha }}",
               "sleep 10",
               "docker ps --filter name=ai-assistance-service"
             ]' \
